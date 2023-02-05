@@ -53,7 +53,7 @@ I found a way to simplify the conversion either way, without losing the special 
 
 ```python
 df.Name.s_str().s_to_ascii()
-df.Nameuni.s_str().s_to_ascii()
+df.Nameuni.s_str().s_to_utf8()
 ```
 
 But converting them all the time back and forth (to use **Series.str [only UTF-8]**) doesn't make any sense, 
