@@ -97,6 +97,7 @@ pd_add_fastloc()
 import pandas as pd
 df = pd.read_csv("https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/titanic.csv")
 df['Nameuni'] = df.Name + 'ö' # get some utf-8 data with special characters
+df['Nameuni2'] = df['Nameuni'].s_str().s_to_ascii()
 dfbig = pd.concat([df.copy() for x in range(100)],ignore_index=True)
 dfbigbig = pd.concat([df.copy() for x in range(1000)],ignore_index=True)
 ```
